@@ -8,11 +8,15 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 
-class Controller extends BaseController
-{
-    use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
-    public function conGa(){
-    	return "Con vịt";
+class Controller extends BaseController {
+
+    use AuthorizesRequests,
+        AuthorizesResources,
+        DispatchesJobs,
+        ValidatesRequests;
+
+    public function __construct() {
+        $this->totalInPage = 30;
     }
     public function chuyen(){
     	return "ABC";

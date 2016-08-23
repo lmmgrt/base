@@ -14,4 +14,7 @@ class Controller extends BaseController
     public function conGa(){
     	return "Con vịt";
     }
+    public function chuyen(){
+    	return "ABC";
+    }
 }
